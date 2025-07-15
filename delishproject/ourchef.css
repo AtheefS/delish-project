@@ -1,0 +1,423 @@
+:root {
+    --brand-color: #DD402B; /* The specific red-orange from the image */
+    --dark-gray: #000000; /* Corresponds to Tailwind's gray-800 */
+    --very-dark-gray: #000000; /* Corresponds to Tailwind's gray-900 */
+    --light-bg: #f0f2f5; /* Light background color for the body */
+    --text-light-gray: #D1D5DB; /* Corresponds to Tailwind's gray-300 */
+    --text-medium-gray: #9CA3AF; /* Corresponds to Tailwind's gray-400 */
+}
+
+/* General body styling */
+body {
+    font-family: 'Inter', sans-serif; /* Sets the global font to Inter */
+    margin: 0; /* Removes default body margin */
+    background-color: var(--light-bg);
+}
+
+
+/* Styling for the DELISH logo text */
+.logo-text {
+    color: var(--brand-color);
+}
+
+/* Styling for main navigation links */
+.nav-link {
+    color: var(--text-light-gray);
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover */
+    padding: 0.5rem 0.75rem; /* px-3 py-2 */
+    border-radius: 0.375rem; /* rounded-md */
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+/* Styling for dropdown items */
+.dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    color: var(--text-light-gray);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 0.375rem; /* rounded-md */
+}
+
+.dropdown-item:hover {
+    background-color: #4B5563; /* Tailwind's gray-700 */
+    color: white;
+}
+
+/* Styling for the "Book a Table" button */
+.book-button {
+    border: 1px solid var(--brand-color);
+    color: var(--brand-color);
+    padding: 0.5rem 1.5rem; /* py-2 px-6 */
+    border-radius: 0.375rem; /* rounded-md */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.book-button:hover {
+    background-color: var(--brand-color);
+    color: white;
+}
+
+/* Custom styles for the arrow icon within the "Book a Table" button */
+.arrow-icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Defines the hover effect for the "Book a Table" button's arrow icon */
+.book-button:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* Styling for mobile navigation items */
+.mobile-nav-item {
+    display: block;
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    color: var(--text-light-gray);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 0.375rem; /* rounded-md */
+}
+
+.mobile-nav-item:hover {
+    background-color: #4B5563; /* Tailwind's gray-700 */
+    color: white;
+}
+
+/* Styling for mobile dropdown items */
+.mobile-dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    color: var(--text-light-gray);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    border-radius: 0.375rem; /* rounded-md */
+}
+
+.mobile-dropdown-item:hover {
+    background-color: #000000; /* Tailwind's gray-700 */
+    color: white;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.hero-about {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url('imj/ourchef.jpg'); /* 🔁 Paste your image file path here */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* dark overlay for readability */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ddd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+}
+
+.team-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.team-card {
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  text-align: center;
+  padding-bottom: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.team-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+}
+
+.team-card p {
+  font-size: 11px;
+  color: #555;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card h3 {
+    font-size: 16px;
+  }
+
+  .team-card p {
+    font-size: 12px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reservation-banner {
+  background-color: #d9d9d9;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.reservation-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.reservation-text {
+  color: #fff;
+  flex: 1 1 70%;
+}
+
+.reservation-text small {
+  display: block;
+  font-size: 10px;
+  color: #fff;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+}
+
+.reservation-text h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.reservation-button {
+  flex: 1 1 25%;
+  text-align: right;
+}
+
+.reservation-button .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  font-size: 12px;
+  transition: 0.3s ease;
+}
+
+.reservation-button .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reservation-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reservation-text,
+  .reservation-button {
+    flex: 1 1 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .reservation-text h2 {
+    font-size: 20px;
+  }
+
+  .reservation-button .btn {
+    font-size: 12px;
+    padding: 10px 25px;
+  }
+}
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 50px 30px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-column h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #e63946;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Newsletter Form */
+.newsletter {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter input {
+  padding: 10px;
+  border: none;
+  width: 70%;
+  border-radius: 3px 0 0 3px;
+  font-size: 14px;
+}
+
+.newsletter button {
+  background-color: #e63946;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+}
+
+/* Bottom Footer Bar */
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #888;
+}
+
+.policy-links a {
+  color: #888;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 13px;
+}

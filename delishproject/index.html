@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gray-100">
+
+  <header class="w-full z-[50] relative">
+    <!-- Top Bar -->
+    <div class="bg-gray-800 text-gray-400 text-sm py-2 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-between items-center rounded-b-md">
+      <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 mb-2 md:mb-0">
+        <div class="flex items-center">
+          <i class="far fa-clock mr-2"></i>
+          <span>Mon-Wed: 11a-9p</span>
+          <i class="fas fa-chevron-down ml-1 text-xs"></i>
+        </div>
+        <div class="flex items-center">
+          <i class="far fa-clock mr-2"></i>
+          <span>Thurs-Sat: 11a-10p</span>
+          <i class="fas fa-chevron-down ml-1 text-xs"></i>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+        <div class="flex items-center">
+          <i class="far fa-envelope mr-2"></i>
+          <span>reservation@delish.com</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-phone-alt mr-2"></i>
+          <span>123 456 7899</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-map-marker-alt mr-2"></i>
+          <span>296 Kidao Avenue Mor Berlin 251584</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="z-[60] bg-gray-900 text-white py-4 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-between items-center shadow-lg rounded-t-md relative">
+      <div class="flex items-center mb-4 md:mb-0">
+        <img src="imj/WhatsApp Image 2025-07-11 at 22.17.15_9136307b.jpg" style="width: 50px;height: 50px;padding: 5px;">
+        <span class="text-2xl font-bold brand-color">DELISH</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex flex-grow justify-center space-x-8">
+        <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md">HOME</a>
+
+        <div class="relative group">
+          <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md flex items-center">
+            PAGES <i class="fas fa-chevron-down ml-2 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto z-[70]">
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">About Us</a>
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Our Team</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md flex items-center">
+            SHOP <i class="fas fa-chevron-down ml-2 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto z-[70]">
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Shop Grid</a>
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Product Details</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md flex items-center">
+            BLOG <i class="fas fa-chevron-down ml-2 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto z-[70]">
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Blog Standard</a>
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Blog Details</a>
+          </div>
+        </div>
+
+        <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md">CONTACT</a>
+      </div>
+
+      <button class="md:hidden text-gray-300 hover:text-white focus:outline-none" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+
+      <button class="book-button border border-brand-color text-brand-color hover:bg-brand-color hover:text-white transition duration-300 ease-in-out py-2 px-6 rounded-md flex items-center justify-center mt-4 md:mt-0">
+        BOOK A TABLE <i class="fas fa-arrow-right ml-2 arrow-icon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero z-[10] relative">
+    <div class="overlay z-[10]">
+      <h2>THE GREAT</h2>
+      <h1>FLAVORED FOOD</h1>
+      <h3>PART OF US</h3>
+      <div class="buttons">
+        <a href="#" class="btn">BOOK A TABLE</a>
+        <a href="#" class="btn">VIEW MENU</a>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="restaurant-section">
+  <div class="image-box">
+    <img src="imj/make reservation imaje .jpg" alt="Restaurant Image" />
+  </div>
+  <div class="content-box">
+    <button class="reservation-btn">MAKE RESERVATION</button>
+    <h1>WELCOME TO OUR <br> LUXURY RESTAURANT</h1>
+    <p>
+      The scallops were perfectly cooked, tender, and flavorful, paired beautifully
+      with a creamy risotto and seasonal vegetables. The presentation was artful,
+      showcasing the chef’s attention to detail.
+    </p>
+    <div class="hotline">
+      <span class="phone-icon">📞</span>
+      <div>
+        <small>HOTLINE 24/7</small>
+        <strong>+256 3254-2568</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    }
+  </script>
+  <section class="restaurant-service-section">
+    <div class="container">
+        <div class="label">OUR SERVICES</div>
+        <h2>OUR RESTAURANT SERVICE</h2>
+        <div class="underline">
+            <span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="imj/our rest ser 1.jpg" alt="Wedding Service" />
+                <h3>WEDDING SERVICE</h3>
+                <p>The chocolate fondant which did not disappoint. It was rich and indulgent, with a gooey center that was pure bliss.</p>
+                <a href="#" class="read-more">READ MORE →</a>
+            </div>
+
+            <div class="service-card">
+                <img src="imj/our rest  ser 2.jpg" alt="Buffet Service" />
+                <h3>BUFFET SERVICE</h3>
+                <p>Assertively myocardinate robust e-tailers for extensible human capital. dpropriately benchmark networks.</p>
+                <a href="#" class="read-more">READ MORE →</a>
+            </div>
+
+            <div class="service-card">
+                <img src="imj/our rest ser 3.jpg" alt="Party Service" />
+                <h3>PARTY SERVICE</h3>
+                <p>Assertively myocardinate robust e-tailers for extensible human capital. dpropriately benchmark networks.</p>
+                <a href="#" class="read-more">READ MORE →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <section class="menu-section">
+    <div class="menu-header">
+      <button class="menu-button">FOOD MENU</button>
+      <h1>OUR DELICIOUS FOODS</h1>
+      <div class="menu-filters">
+        <button class="active">ALL FOOD</button>
+        <button>BREAKFAST</button>
+        <button>LUNCH</button>
+        <button>DINNER</button>
+      </div>
+    </div>
+
+    <div class="menu-content">
+      <div class="menu-left">
+        <img src="imj/food menu 0.jpg" alt="Chef" class="chef-image">
+        <ul class="food-list">
+          <li>Braised Short Ribs <span>$15.00</span></li>
+          <li>Roasted Vegetable Platter <span>$15.00</span></li>
+          <li>Classic Caesar Salad <span>$15.00</span></li>
+          <li>Szechuan Beef Stir-Fry <span>$15.00</span></li>
+          <li>Vegan Buddha Bowl <span>$15.00</span></li>
+          <li>Vegan Buddha Bowl <span>$15.00</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-grid">
+        <div class="food-card">
+          <img src="imj/food menu 1.jpg" alt="Caesar Salad">
+          <h4>Classic Caesar Salad</h4>
+          <p>$15.00</p>
+        </div>
+        <div class="food-card">
+          <img src="imj/food menu 2.jpg" alt="Braised Short Ribs">
+          <h4>Braised Short Ribs</h4>
+          <p>$15.00</p>
+        </div>
+         <div class="food-card">
+          <img src="imj/" alt="Chicken Masala">
+          <h4>Chicken Masala</h4>
+          <p>$15.00</p>
+        </div>
+        <div class="food-card">
+          <img src="imj/food menu 4.jpg" alt="Chicken Alfredo">
+          <h4>Chicken Alfredo Pasta</h4>
+          <p>$15.00</p>
+        </div>
+        <div class="food-card">
+          <img src="imj/food menu pic 5.jpg" alt="Vegan Bowl">
+          <h4>Vegan Buddha Bowl</h4>
+          <p>$15.00</p>
+        </div>
+        <div class="food-card">
+          <img src="imj/foo menu 6.jpg" alt="Chocolate Cake">
+          <h4>Chocolate Lava Cake</h4>
+          <p>$15.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="gallery-section">
+  <div class="gallery-overlay">
+    <div class="stats-container">
+      <div class="stat">
+        <h2>15</h2>
+        <p>NEW<br>COOL PROJECTS</p>
+      </div>
+      <div class="stat">
+        <h2>15</h2>
+        <p>TOTAL<br>AWARDS WIN</p>
+      </div>
+      <div class="stat">
+        <h2>20</h2>
+        <p>UNIQUE<br>FOOD SPECIALITIES</p>
+      </div>
+      <div class="stat">
+        <h2>69</h2>
+        <p>HARD<br>TEAM MEMBERS</p>
+      </div>
+      <div class="arrows">
+        <button>&larr;</button>
+        <button>&rarr;</button>
+      </div>
+    </div>
+
+    <div class="gallery-heading">
+      <button class="view-btn">VIEW OUR PROJECTS</button>
+      <h2>OUR FOOD GALLERY</h2>
+    </div>
+
+    <div class="gallery-images">
+      <div class="img-box">
+        <img src="imj/our food gallary 1.jpg" alt="Food 1">
+      </div>
+      <div class="img-box red-overlay">
+        <div class="eye-icon">&#128065;</div>
+      </div>
+      <div class="img-box">
+        <img src="imj/food gallary 2.jpg" alt="Food 2">
+      </div>
+      <div class="img-box">
+        <img src="imj/food gallary 3.jpg" alt="Food 3">
+      </div>
+      <div class="img-box">
+        <img src="imj/food gallary 4.jpg" alt="Food 4">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div class="testimonial-header">
+    <span class="badge">CLIENT TESTIMONIAL</span>
+    <h2>OUR CUSTOMER FEEDBACKS</h2>
+    <div class="divider">
+      <div class="line"></div>
+      <div class="dots">••••</div>
+    </div>
+  </div>
+
+  <div class="testimonial-cards">
+    <div class="testimonial-box">
+      <p class="testimonial-text">
+        The only minor downside was the noise level, which made conversation a bit challenging at times. However, this did not significantly detract from the overall experience. The Culinary Corner excels in delivering delicious food and exceptional service.
+      </p>
+      <div class="testimonial-footer">
+        <div class="avatar"></div>
+        <div class="reviewer-info">
+          <strong>Amanda Martin</strong><br>
+          <span>Food Reviewer</span>
+        </div>
+        <div class="quote-symbol">❞</div>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <p class="testimonial-text">
+        The only minor downside was the noise level, which made conversation a bit challenging at times. However, this did not significantly detract from the overall experience. The Culinary Corner excels in delivering delicious food and exceptional service.
+      </p>
+      <div class="testimonial-footer">
+        <div class="avatar"></div>
+        <div class="reviewer-info">
+          <strong>Amanda Martin</strong><br>
+          <span>Food Reviewer</span>
+        </div>
+        <div class="quote-symbol">❞</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reservation-section">
+  <div class="reservation-container">
+
+    <div class="reservation-form">
+      <span class="badge">BOOK A TABLE</span>
+      <h2>MAKE RESERVATION</h2>
+      <div class="divider">
+        <div class="line"></div>
+        <div class="dots">••••</div>
+      </div>
+
+      <form>
+        <select>
+          <option>1 Person</option>
+          <option>2 People</option>
+          <option>3 People</option>
+          <option>4 People</option>
+        </select>
+
+        <input type="date" value="2024-05-14">
+
+        <select>
+          <option>09:00 am</option>
+          <option>10:00 am</option>
+          <option>11:00 am</option>
+          <option>12:00 pm</option>
+        </select>
+
+        <button type="submit">BOOK NOW</button>
+      </form>
+    </div>
+
+    <div class="reservation-image">
+      <img src="imj/book a table.jpg" alt="Dish Image">
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-content">
+    
+    <!-- Logo & Address -->
+    <div class="footer-column">
+      <div class="footer-logo">🍽️ DELISH</div>
+      <p>1234, Restaurant St, South City<br>New York 0124</p>
+      <div class="social-icons">
+        <span class="icon facebook"><i class="fa-brands fa-facebook"></i></span>
+        <span class="icon instagram"><i class="fa-brands fa-instagram"></i></span>
+        <span class="icon twitter"><i class="fa-brands fa-twitter"></i></span>
+        <span class="icon linkedin"><i class="fa-brands fa-linkedin"></i></span>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-column">
+      <h4>LINKS</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Meet our team</li>
+        <li>Case stories</li>
+        <li>Latest News</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <!-- Other Links -->
+    <div class="footer-column">
+      <h4>OTHER LINK</h4>
+      <ul>
+        <li>Careers</li>
+        <li>Creative Agency</li>
+        <li>Digital Agency</li>
+        <li>Marketing</li>
+        <li>Digital Services</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-column">
+      <h4>NEWSLETTER</h4>
+      <p>Subscribe us & receive our offers and updates<br>your inbox directly</p>
+      <div class="newsletter">
+        <input type="email" placeholder="Email Address">
+        <button type="submit">✈</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>All rights received 2024. Delish Restaurant</p>
+    <div class="policy-links">
+      <a href="#">Terms Of Use</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+  
+</body>
+</html>

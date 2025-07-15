@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+                <title>Delish Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body class="bg-gray-100">
+
+  <header class="w-full z-[50] relative">
+    <!-- Top Bar -->
+    <div class="bg-gray-800 text-gray-400 text-sm py-2 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-between items-center rounded-b-md">
+      <div class="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 mb-2 md:mb-0">
+        <div class="flex items-center">
+          <i class="far fa-clock mr-2"></i>
+          <span>Mon-Wed: 11a-9p</span>
+          <i class="fas fa-chevron-down ml-1 text-xs"></i>
+        </div>
+        <div class="flex items-center">
+          <i class="far fa-clock mr-2"></i>
+          <span>Thurs-Sat: 11a-10p</span>
+          <i class="fas fa-chevron-down ml-1 text-xs"></i>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+        <div class="flex items-center">
+          <i class="far fa-envelope mr-2"></i>
+          <span>reservation@delish.com</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-phone-alt mr-2"></i>
+          <span>123 456 7899</span>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-map-marker-alt mr-2"></i>
+          <span>296 Kidao Avenue Mor Berlin 251584</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="z-[60] bg-gray-900 text-white py-4 px-4 md:px-8 lg:px-16 flex flex-col md:flex-row justify-between items-center shadow-lg rounded-t-md relative">
+      <div class="flex items-center mb-4 md:mb-0">
+        <img src="imj/WhatsApp Image 2025-07-11 at 22.17.15_9136307b.jpg" style="width: 50px;height: 50px;padding: 5px;">
+        <span class="text-2xl font-bold brand-color">DELISH</span>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex flex-grow justify-center space-x-8">
+        <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md">HOME</a>
+
+        <div class="relative group">
+          <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md flex items-center">
+            PAGES <i class="fas fa-chevron-down ml-2 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto z-[70]">
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">About Us</a>
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Our Team</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md flex items-center">
+            SHOP <i class="fas fa-chevron-down ml-2 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto z-[70]">
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Shop Grid</a>
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Product Details</a>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md flex items-center">
+            BLOG <i class="fas fa-chevron-down ml-2 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out pointer-events-none group-hover:pointer-events-auto z-[70]">
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Blog Standard</a>
+            <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md">Blog Details</a>
+          </div>
+        </div>
+
+        <a href="#" class="text-gray-300 hover:text-white transition duration-300 ease-in-out px-3 py-2 rounded-md">CONTACT</a>
+      </div>
+
+      <button class="md:hidden text-gray-300 hover:text-white focus:outline-none" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+
+      <button class="book-button border border-brand-color text-brand-color hover:bg-brand-color hover:text-white transition duration-300 ease-in-out py-2 px-6 rounded-md flex items-center justify-center mt-4 md:mt-0">
+        BOOK A TABLE <i class="fas fa-arrow-right ml-2 arrow-icon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero-about">
+  <div class="hero-content">
+    <h1>LATEST NEWS</h1>
+    <p>HOME / LATEST NEWS</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="main-content">
+    
+    <!-- Blog Post 1 -->
+    <div class="blog-post">
+      <img src="imj/BLOG3.jpg" alt="Food Top View">
+      <div class="post-tag">FOODIES</div>
+      <div class="post-meta">
+        <span>📅 24 Feb, 2024</span>
+        <span>👤 by admin</span>
+      </div>
+      <h2 class="post-title">Iconic Establishments Are Reinventing</h2>
+      <p class="post-excerpt">
+        Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holistically reinvest...
+      </p>
+      <a href="#" class="read-more">Read Details →</a>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-post">
+      <img src="imj/BLOG1.jpg" alt="Cheese and Wine">
+      <div class="post-tag">FOODIES</div>
+      <div class="post-meta">
+        <span>📅 24 Feb, 2024</span>
+        <span>👤 by admin</span>
+      </div>
+      <h2 class="post-title">Exploring the World of Food and Wine</h2>
+      <p class="post-excerpt">
+        Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holistically reinvest...
+      </p>
+      <a href="#" class="read-more">Read Details →</a>
+    </div>
+
+  </div>
+
+  <aside class="sidebar">
+    
+    <!-- Search -->
+    <div class="search-box">
+      <input type="text" placeholder="Enter Keyword">
+      <button>🔍</button>
+    </div>
+
+    <!-- Recent Posts -->
+    <div class="widget">
+      <h3>Recent Posts</h3>
+      <ul>
+        <li>Craftsmanship of Artisanal Foods in Restaurants</li>
+        <li>Restaurants Are Adapting to Changing Dietary Trends</li>
+        <li>Passion and Perseverance from Renowned Chefs</li>
+      </ul>
+    </div>
+
+    <!-- Categories -->
+    <div class="widget">
+      <h3>Categories</h3>
+      <ul>
+        <li>Soups and Salads →</li>
+        <li>Pasta and Noodles →</li>
+        <li>Vegetarian and Vegan →</li>
+        <li>Pizza and Flatbreads →</li>
+      </ul>
+    </div>
+
+    <!-- Gallery -->
+    <div class="widget gallery-widget">
+      <h3>Gallery</h3>
+      <div class="gallery">
+        <img src="imj/FOOD1.jpg" alt="Food 1">
+        <img src="imj/FOOD2.jpg" alt="Food 2">
+        <img src="imj/FOOD3.jpg" alt="Food 3">
+        <img src="imj/FOOD4.jpg" alt="Food 4">
+        <img src="imj/FOOD5.jpg" alt="Food 5">
+        <img src="imj/FOOD6.jpg" alt="Food 6">
+      </div>
+    </div>
+
+    <!-- Tags -->
+    <div class="widget">
+      <h3>Popular Tags</h3>
+      <div class="tags">
+        <span>Advice</span>
+        <span>Author</span>
+        <span>Consulting</span>
+        <span>Delish</span>
+        <span>Family</span>
+        <span>Health</span>
+        <span>Tip</span>
+        <span>Judge</span>
+        <span>Solution</span>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<div class="container">
+  
+  <!-- Blog Post 1 -->
+  <div class="blog-card">
+    <img src="imj/BLOG2.jpg" alt="Food Photo on Phone">
+    <div class="tag">FOODIES</div>
+    <div class="meta">
+      <span class="date">📅 24 Feb, 2024</span>
+      <span class="author">👤 by admin</span>
+    </div>
+    <h2 class="title">What it takes to achieve excellence</h2>
+    <p class="excerpt">
+      Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holistically reintermediate client based materials...
+    </p>
+    <a href="#" class="read-more">Read Details →</a>
+  </div>
+
+  <!-- Blog Post 2 -->
+  <div class="blog-card">
+    <img src="imj/BLOG4.jpg" alt="Fine Dining">
+    <div class="tag">FOODIES</div>
+    <div class="meta">
+      <span class="date">📅 24 Feb, 2024</span>
+      <span class="author">👤 by admin</span>
+    </div>
+    <h2 class="title">Affordable gourmet experiences</h2>
+    <p class="excerpt">
+      Efficiently reinvent installed base opportunities after team driven quality vectors. Dramatically for value added partnerships. Holistically reintermediate client based materials...
+    </p>
+    <a href="#" class="read-more">Read Details →</a>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <a href="#" class="page active">1</a>
+    <a href="#" class="page">2</a>
+    <a href="#" class="page">3</a>
+    <a href="#" class="page">→</a>
+  </div>
+
+</div>
+
+<section class="booking-banner">
+    <div class="content">
+      <div class="text">
+        <p class="subheading">Book a table for your and family members</p>
+        <h2 class="heading">Need a table on coffee house</h2>
+      </div>
+      <div class="btn-container">
+        <a href="#" class="book-btn">Book a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer-content">
+    
+    <!-- Logo & Address -->
+    <div class="footer-column">
+      <div class="footer-logo">🍽️ DELISH</div>
+      <p>1234, Restaurant St, South City<br>New York 0124</p>
+      <div class="social-icons">
+        <span class="icon facebook"><i class="fa-brands fa-facebook"></i></span>
+        <span class="icon instagram"><i class="fa-brands fa-instagram"></i></span>
+        <span class="icon twitter"><i class="fa-brands fa-twitter"></i></span>
+        <span class="icon linkedin"><i class="fa-brands fa-linkedin"></i></span>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-column">
+      <h4>LINKS</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Meet our team</li>
+        <li>Case stories</li>
+        <li>Latest News</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+
+    <!-- Other Links -->
+    <div class="footer-column">
+      <h4>OTHER LINK</h4>
+      <ul>
+        <li>Careers</li>
+        <li>Creative Agency</li>
+        <li>Digital Agency</li>
+        <li>Marketing</li>
+        <li>Digital Services</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-column">
+      <h4>NEWSLETTER</h4>
+      <p>Subscribe us & receive our offers and updates<br>your inbox directly</p>
+      <div class="newsletter">
+        <input type="email" placeholder="Email Address">
+        <button type="submit">✈</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>All rights received 2024. Delish Restaurant</p>
+    <div class="policy-links">
+      <a href="#">Terms Of Use</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
